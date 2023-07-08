@@ -6,7 +6,8 @@ export default function App() {
 let excl=["Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!"];
 let empt=["","","","","","","","",""]
 let empt_=empt.slice();
-empt_[4]="X";
+let rnd=Math.floor(Math.random()*9);
+empt_[rnd]="X";
 let coin=Math.floor(Math.random()*2);
 let ch=[empt_,empt];
   let [cells,setCells]=useState(ch[coin]);

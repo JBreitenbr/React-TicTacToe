@@ -66,7 +66,7 @@ else if(arr[0]!="" && arr[3]!="" && arr[6]=="" && arr[0]==arr[3]){
   else if(arr[0]=="" && arr[3]!="" && arr[6]!="" && arr[3]==arr[6]){
     arr[0]=compSym;
   }
-  else if(arr[1]!="" && arr[4]==!="" && arr[7]=="" && arr[1]==arr[4]){
+  else if(arr[1]!="" && arr[4]!="" && arr[7]=="" && arr[1]==arr[4]){
     arr[7]=compSym;
   }
   else if(arr[1]!="" && arr[4]=="" && arr[7]!="" && arr[1]==arr[7]){

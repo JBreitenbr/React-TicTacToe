@@ -30,76 +30,76 @@ const compDraw = (arr) => {
   }
   let l=bij.length;
   let r=Math.floor(Math.random()*l);
-    if(arr[0]==player && arr[1]==player && arr[2]==""){
+    if(arr[0]!="" && arr[1]!="" && arr[2]=="" && arr[0]==arr[1]){
     arr[2]=compSym;
   }
-  else if(arr[0]==player && arr[1]=="" && arr[2]==player){
+  else if(arr[0]!="" && arr[1]=="" && arr[2]!="" && arr[0]==arr[2]){
     arr[1]=compSym;
   }
-  else if(arr[0]=="" && arr[1]==player && arr[2]==player){
+  else if(arr[0]=="" && arr[1]!="" && arr[2]!="" && arr[1]==arr[2]){
     arr[0]=compSym;
   }
-    if(arr[3]==player && arr[4]==player && arr[5]==""){
+    if(arr[3]!="" && arr[4]!="" && arr[5]=="" && arr[3]==arr[4]){
     arr[5]=compSym;
   }
-  else if(arr[3]==player && arr[4]=="" && arr[5]==player){
+  else if(arr[3]!="" && arr[4]=="" && arr[5]!="" && arr[3]==arr[5]){
     arr[4]=compSym;
   }
-  else if(arr[3]=="" && arr[4]==player && arr[5]==player){
+  else if(arr[3]=="" && arr[4]!="" && arr[5]!="" && arr[4]==arr[5]){
     arr[3]=compSym;
   }
-  else if(arr[6]==player && arr[7]==player && arr[8]==""){
+  else if(arr[6]!="" && arr[7]!="" && arr[8]=="" && arr[6]==arr[7]){
     arr[8]=compSym;
   }
-  else if(arr[6]==player && arr[7]=="" && arr[8]==player){
+  else if(arr[6]!="" && arr[7]=="" && arr[8]!="" && arr[6]==arr[8]){
     arr[7]=compSym;
   }
-  else if(arr[6]=="" && arr[7]==player && arr[8]==player){
+  else if(arr[6]=="" && arr[7]!="" && arr[8]!="" && arr[7]==arr[8]){
     arr[6]=compSym;
   }
-else if(arr[0]==player && arr[3]==player && arr[6]==""){
+else if(arr[0]!="" && arr[3]!="" && arr[6]=="" && arr[0]==arr[3]){
     arr[6]=compSym;
   }
-  else if(arr[0]==player && arr[3]=="" && arr[6]==player){
+  else if(arr[0]!="" && arr[3]=="" && arr[6]!="" && arr[0]==arr[6]){
     arr[3]=compSym;
   }
-  else if(arr[0]=="" && arr[3]==player && arr[6]==player){
+  else if(arr[0]=="" && arr[3]!="" && arr[6]!="" && arr[3]==arr[6]){
     arr[0]=compSym;
   }
-  else if(arr[1]==player && arr[4]==player && arr[7]==""){
+  else if(arr[1]!="" && arr[4]==!="" && arr[7]=="" && arr[1]==arr[4]){
     arr[7]=compSym;
   }
-  else if(arr[1]==player && arr[4]=="" && arr[7]==player){
+  else if(arr[1]!="" && arr[4]=="" && arr[7]!="" && arr[1]==arr[7]){
     arr[4]=compSym;
   }
-  else if(arr[1]=="" && arr[4]==player && arr[7]==player){
+  else if(arr[1]=="" && arr[4]!="" && arr[7]!="" && arr[4]==arr[7]){
     arr[1]=compSym;
   }
-  else if(arr[2]==player && arr[4]==player && arr[8]==""){
+  else if(arr[2]!="" && arr[5]!="" && arr[8]=="" && arr[2]==arr[5]){
     arr[8]=compSym;
   }
-  else if(arr[2]==player && arr[4]=="" && arr[8]==player){
-    arr[4]=compSym;
+  else if(arr[2]!="" && arr[5]=="" && arr[8]!="" && arr[2]==arr[8]){
+    arr[5]=compSym;
   }
-  else if(arr[2]=="" && arr[4]==player && arr[8]==player){
+  else if(arr[2]=="" && arr[5]!="" && arr[8]!="" && arr[5]==arr[8]){
     arr[2]=compSym;
   }
-  else if(arr[0]==player && arr[4]==player && arr[8]==""){
+  else if(arr[0]!="" && arr[4]!="" && arr[8]=="" && arr[0]==arr[4]){
     arr[8]=compSym;
   }
-  else if(arr[0]==player && arr[4]=="" && arr[8]==player){
+  else if(arr[0]!="" && arr[4]=="" && arr[8]!="" && arr[0]==arr[8]){
     arr[4]=compSym;
   }
-  else if(arr[0]=="" && arr[4]==player && arr[8]==player){
+  else if(arr[0]=="" && arr[4]!="" && arr[8]!="" && arr[4]==arr[8]){
     arr[0]=compSym;
   }
-  else if(arr[2]==player && arr[4]==player && arr[6]==""){
+  else if(arr[2]!="" && arr[4]!="" && arr[6]=="" && arr[2]==arr[4]){
     arr[6]=compSym;
   }
-  else if(arr[2]==player && arr[4]=="" && arr[6]==player){
+  else if(arr[2]!="" && arr[4]=="" && arr[6]!="" && arr[2]==arr[6]){
     arr[4]=compSym;
   }
-  else if(arr[2]=="" && arr[4]==player && arr[6]==player){
+  else if(arr[2]=="" && arr[4]!="" && arr[6]!="" && arr[4]==arr[6]){
     arr[2]=compSym;
   }
   else{arr[bij[r]]=compSym;}

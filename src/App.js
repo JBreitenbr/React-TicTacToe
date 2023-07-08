@@ -6,8 +6,7 @@ export default function App() {
 let excl=["Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!"];
 let empt=["","","","","","","","",""]
 let empt_=empt.slice();
-let rnd=Math.floor(Math.random()*9);
-empt_[rnd]="X";
+empt_[4]="X";
 let coin=Math.floor(Math.random()*2);
 let ch=[empt_,empt];
   let [cells,setCells]=useState(ch[coin]);
@@ -31,7 +30,79 @@ const compDraw = (arr) => {
   }
   let l=bij.length;
   let r=Math.floor(Math.random()*l);
-  arr[bij[r]]=compSym;
+    if(arr[0]==player && arr[1]==player && arr[2]==""){
+    arr[2]=compSym;
+  }
+  else if(arr[0]==player && arr[1]=="" && arr[2]==player){
+    arr[1]=compSym;
+  }
+  else if(arr[0]=="" && arr[1]==player && arr[2]==player){
+    arr[0]=compSym;
+  }
+    if(arr[3]==player && arr[4]==player && arr[5]==""){
+    arr[5]=compSym;
+  }
+  else if(arr[3]==player && arr[4]=="" && arr[5]==player){
+    arr[4]=compSym;
+  }
+  else if(arr[3]=="" && arr[4]==player && arr[5]==player){
+    arr[3]=compSym;
+  }
+  else if(arr[6]==player && arr[7]==player && arr[8]==""){
+    arr[8]=compSym;
+  }
+  else if(arr[6]==player && arr[7]=="" && arr[8]==player){
+    arr[7]=compSym;
+  }
+  else if(arr[6]=="" && arr[7]==player && arr[8]==player){
+    arr[6]=compSym;
+  }
+else if(arr[0]==player && arr[3]==player && arr[6]==""){
+    arr[6]=compSym;
+  }
+  else if(arr[0]==player && arr[3]=="" && arr[6]==player){
+    arr[3]=compSym;
+  }
+  else if(arr[0]=="" && arr[3]==player && arr[6]==player){
+    arr[0]=compSym;
+  }
+  else if(arr[1]==player && arr[4]==player && arr[7]==""){
+    arr[7]=compSym;
+  }
+  else if(arr[1]==player && arr[4]=="" && arr[7]==player){
+    arr[4]=compSym;
+  }
+  else if(arr[1]=="" && arr[4]==player && arr[7]==player){
+    arr[1]=compSym;
+  }
+  else if(arr[2]==player && arr[4]==player && arr[8]==""){
+    arr[8]=compSym;
+  }
+  else if(arr[2]==player && arr[4]=="" && arr[8]==player){
+    arr[4]=compSym;
+  }
+  else if(arr[2]=="" && arr[4]==player && arr[8]==player){
+    arr[2]=compSym;
+  }
+  else if(arr[0]==player && arr[4]==player && arr[8]==""){
+    arr[8]=compSym;
+  }
+  else if(arr[0]==player && arr[4]=="" && arr[8]==player){
+    arr[4]=compSym;
+  }
+  else if(arr[0]=="" && arr[4]==player && arr[8]==player){
+    arr[0]=compSym;
+  }
+  else if(arr[2]==player && arr[4]==player && arr[6]==""){
+    arr[6]=compSym;
+  }
+  else if(arr[2]==player && arr[4]=="" && arr[6]==player){
+    arr[4]=compSym;
+  }
+  else if(arr[2]=="" && arr[4]==player && arr[6]==player){
+    arr[2]=compSym;
+  }
+  else{arr[bij[r]]=compSym;}
   setCells(arr);
 }
 let expl=`Your Turn: ${player}`;

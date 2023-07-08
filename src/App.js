@@ -55,6 +55,9 @@ const handleClick = (i) => {
   
     ;
 }
+  
+let msg2;
+  
 function calculateWinner(cells) {
         const lines = [
             [0, 1, 2],
@@ -71,6 +74,10 @@ function calculateWinner(cells) {
 
             if ((cells[a]=="X"||cells[a]=="O") && cells[a] === cells[b] && cells[a] === cells[c]) {
                 expl="";
+                if(cells[a]==player){
+                  msg2="You win!"
+                }
+               else {msg2="You lose!"}
                 return cells[a];
             }
         }
@@ -103,6 +110,7 @@ let winner = calculateWinner(cells);
         {cells.map((cell,index)=><Cell key={index} id={index} value={cells[index]} dis={dis} onClick={() => handleClick(index)}/>)}
         </div>
    <h2 className="msg">{msg}</h2>  
+   <h2 className="msg2">{msg2}</h2>
       {winner && <h2><button className="btn" onClick={refreshPage}>Reset</button></h2>}
     </main>
   )

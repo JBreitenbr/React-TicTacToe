@@ -32,76 +32,76 @@ const compDraw = (arr) => {
   let l=bij.length;
   let r=Math.floor(Math.random()*l);
     if(arr[0]!="" && arr[1]!="" && arr[2]=="" && arr[0]==arr[1]){
-    arr[2]=compSym;
+    arr[2]=compSym; return;
   }
   else if(arr[0]!="" && arr[1]=="" && arr[2]!="" && arr[0]==arr[2]){
-    arr[1]=compSym;
+    arr[1]=compSym; return;
   }
   else if(arr[0]=="" && arr[1]!="" && arr[2]!="" && arr[1]==arr[2]){
-    arr[0]=compSym;
+    arr[0]=compSym; return;
   }
     if(arr[3]!="" && arr[4]!="" && arr[5]=="" && arr[3]==arr[4]){
-    arr[5]=compSym;
+    arr[5]=compSym; return;
   }
   else if(arr[3]!="" && arr[4]=="" && arr[5]!="" && arr[3]==arr[5]){
-    arr[4]=compSym;
+    arr[4]=compSym; return;
   }
   else if(arr[3]=="" && arr[4]!="" && arr[5]!="" && arr[4]==arr[5]){
-    arr[3]=compSym;
+    arr[3]=compSym; return;
   }
   else if(arr[6]!="" && arr[7]!="" && arr[8]=="" && arr[6]==arr[7]){
-    arr[8]=compSym;
+    arr[8]=compSym; return;
   }
   else if(arr[6]!="" && arr[7]=="" && arr[8]!="" && arr[6]==arr[8]){
-    arr[7]=compSym;
+    arr[7]=compSym; return;
   }
   else if(arr[6]=="" && arr[7]!="" && arr[8]!="" && arr[7]==arr[8]){
-    arr[6]=compSym;
+    arr[6]=compSym; return;
   }
 else if(arr[0]!="" && arr[3]!="" && arr[6]=="" && arr[0]==arr[3]){
-    arr[6]=compSym;
+    arr[6]=compSym; return;
   }
   else if(arr[0]!="" && arr[3]=="" && arr[6]!="" && arr[0]==arr[6]){
-    arr[3]=compSym;
+    arr[3]=compSym; return;
   }
   else if(arr[0]=="" && arr[3]!="" && arr[6]!="" && arr[3]==arr[6]){
-    arr[0]=compSym;
+    arr[0]=compSym; return;
   }
   else if(arr[1]!="" && arr[4]!="" && arr[7]=="" && arr[1]==arr[4]){
-    arr[7]=compSym;
+    arr[7]=compSym; return;
   }
   else if(arr[1]!="" && arr[4]=="" && arr[7]!="" && arr[1]==arr[7]){
-    arr[4]=compSym;
+    arr[4]=compSym; return;
   }
   else if(arr[1]=="" && arr[4]!="" && arr[7]!="" && arr[4]==arr[7]){
-    arr[1]=compSym;
+    arr[1]=compSym; return;
   }
   else if(arr[2]!="" && arr[5]!="" && arr[8]=="" && arr[2]==arr[5]){
-    arr[8]=compSym;
+    arr[8]=compSym; return;
   }
   else if(arr[2]!="" && arr[5]=="" && arr[8]!="" && arr[2]==arr[8]){
-    arr[5]=compSym;
+    arr[5]=compSym; return;
   }
   else if(arr[2]=="" && arr[5]!="" && arr[8]!="" && arr[5]==arr[8]){
-    arr[2]=compSym;
+    arr[2]=compSym; return; 
   }
   else if(arr[0]!="" && arr[4]!="" && arr[8]=="" && arr[0]==arr[4]){
-    arr[8]=compSym;
+    arr[8]=compSym; return;
   }
   else if(arr[0]!="" && arr[4]=="" && arr[8]!="" && arr[0]==arr[8]){
-    arr[4]=compSym;
+    arr[4]=compSym; return;
   }
   else if(arr[0]=="" && arr[4]!="" && arr[8]!="" && arr[4]==arr[8]){
-    arr[0]=compSym;
+    arr[0]=compSym; return;
   }
   else if(arr[2]!="" && arr[4]!="" && arr[6]=="" && arr[2]==arr[4]){
-    arr[6]=compSym;
+    arr[6]=compSym; return;
   }
   else if(arr[2]!="" && arr[4]=="" && arr[6]!="" && arr[2]==arr[6]){
-    arr[4]=compSym;
+    arr[4]=compSym; return;
   }
   else if(arr[2]=="" && arr[4]!="" && arr[6]!="" && arr[4]==arr[6]){
-    arr[2]=compSym;
+    arr[2]=compSym; return;
   }
   else{arr[bij[r]]=compSym;}
   setCells(arr);

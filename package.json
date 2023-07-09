@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://jbreitenbr.github.io/Tic-Tac-Toe",
+  "homepage": "https://jbreitenbr.github.io/React-TicTacToe",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

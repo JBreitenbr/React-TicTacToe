@@ -109,8 +109,8 @@ else if(arr[0]!="" && arr[3]!="" && arr[6]=="" && arr[0]==arr[3]){
 let expl=`Your Turn: ${player}`;
 const handleClick = (i) => {
   let cells_ = cells.slice();
-  if(winner){return;}
-  if (cells_[i] == "" && !winner) {
+  if(calculateWinner(cells_)){return;}
+  if (cells_[i] == "" ) {
       cells_[i] = player;
       
       setCells(cells_);

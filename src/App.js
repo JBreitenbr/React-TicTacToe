@@ -3,7 +3,7 @@ import {Cell} from './Cell'
 import {useState} from 'react'
 
 export default function App() {
-let excl=["Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!","Game over!"];
+
 let empt=["","","","","","","","",""]
 let empt_=empt.slice();
 let rnd=Math.floor(Math.random()*9);
@@ -16,7 +16,7 @@ let players=["X","O"];
 
 let [compSym, setCompSym]=useState(players[coin]);
 let [player, setPlayer]=useState(players[1-coin]);
-let [dis,setDis]=useState(false);
+
 function refreshPage() {
     window.location.reload(false);
 }
@@ -109,17 +109,12 @@ else if(arr[0]!="" && arr[3]!="" && arr[6]=="" && arr[0]==arr[3]){
 let expl=`Your Turn: ${player}`;
 const handleClick = (i) => {
   let cells_ = cells.slice();
-  
+  if(winner){return;}
   if (cells_[i] == "" && !winner) {
       cells_[i] = player;
       
       setCells(cells_);
       compDraw(cells_);
-    }
-    else if(cells_[i]=="" && winner){
-      setCells(excl);
-      setDis(true);
-      alert("Game already over")
     }
   else {
       alert("Already taken")
@@ -157,11 +152,6 @@ function calculateWinner(cells) {
     if(cells[i]==""){
       return null;
     }
-    if(cells[i]=="Game over!")
-      {
-        expl="";
-        return "Hoppla!";
-      }
   }
   expl="";
   return "Tied";
@@ -173,13 +163,13 @@ let winner = calculateWinner(cells);
     if (winner && winner!="Tied") {
         msg = 'Winner: ' + winner;
     } 
-    if(winner=="Tied"||winner=="Hoppla!"){msg=winner;}
+    if(winner=="Tied"){msg=winner;}
   return (
     <main>
     <h2 id="title">A Simple Tic-Tac-Toe Game</h2>
     <h3>{expl}</h3>
       <div className="board">
-        {cells.map((cell,index)=><Cell key={index} id={index} value={cells[index]} dis={dis} onClick={() => handleClick(index)}/>)}
+        {cells.map((cell,index)=><Cell key={index} id={index} value={cells[index]} onClick={() => handleClick(index)}/>)}
         </div>
    <h2 className="msg">{msg}</h2>  
    <h2 className="msg2">{msg2}</h2>
